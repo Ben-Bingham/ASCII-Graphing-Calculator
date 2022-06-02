@@ -1,10 +1,11 @@
 #pragma once
 
+#include <string>
+
 namespace IO {
 	class Printer {
-	private:
-		
 	public:
-		void print();
+		void print(std::string string);
+		void println(std::string string);
 	};
 }

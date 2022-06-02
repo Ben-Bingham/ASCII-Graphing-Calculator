@@ -1,10 +1,10 @@
 #pragma once
 
+#include <string>
+
 namespace IO {
 	class Reader {
-	private:
-
 	public:
-		void read();
+		std::string read();
 	};
 }
