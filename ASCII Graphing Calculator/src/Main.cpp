@@ -1,25 +1,28 @@
 #include <iostream>
 #include <string>
 
-#define SCREEN "."
-#define LINE "*"
-
-int screenWidth = 100;
-int screenHeight = 20;
+#include "Reader.h"
+#include "Printer.h"
+#include "Graphics.h"
+#include "Screen.h"
 
 int main() {
+	int screenWidth = 100;
+	int screenHeight = 20;
+	bool calcOpen = true;
 
-	std::string screen;
+	IO::GUI::Screen screen = IO::GUI::Screen(screenWidth, screenHeight);
+	IO::GUI::Graphics graphics = IO::GUI::Graphics();
+	IO::Printer printer = IO::Printer();
+	IO::Reader reader = IO::Reader();
 
-	for (int i = 0; i < screenHeight; i++) {
-		for (int j = 0; j < screenWidth; j++) {
-			screen += SCREEN;
-		}
-		screen += "\n";
+	while (calcOpen) {
+		graphics.clearScreen();
+		graphics.drawScreen(screen);
+		
+		reader.read();
+		//process input to determine what to do
 	}
 
-	std::cout << screen << std::endl;
-
-	std::cin.get();
 	return 0;
 }
