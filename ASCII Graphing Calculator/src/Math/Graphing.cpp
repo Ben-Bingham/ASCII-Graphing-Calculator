@@ -3,7 +3,7 @@
 
 namespace Math {
 	Graphing::Graphing(int width, int height) 
-		: m_Width(width), m_Height(height) {
+		: m_Width(width), m_Height(height), m_Data(height, std::vector<int>(width, 0)) {
 
 	}
 
