@@ -13,10 +13,12 @@ namespace Math {
 		std::vector<std::vector<int>> m_Data;
 
 		Expression m_Expression;
+		VariableExpression m_VariableExpression;
 		Processor m_Processor;
 
 	public:
 		Graphing(int width, int height, Expression expression);
+		Graphing(int width, int height, VariableExpression expression);
 
 		void graph();
 
