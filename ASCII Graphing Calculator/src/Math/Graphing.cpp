@@ -2,6 +2,11 @@
 #include "Math\Graphing.h"
 
 namespace Math {
+	Graphing::Graphing(int width, int height) 
+		: m_Width(width), m_Height(height) {
+
+	}
+
 	Graphing::Graphing(int width, int height, Expression expression)
 		: m_Width(width), m_Height(height), m_Expression(expression), m_Data(height, std::vector<int>(width, 0)), m_VariableExpression(X, Additon, NULL) {
 

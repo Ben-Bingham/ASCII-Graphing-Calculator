@@ -8,6 +8,8 @@ namespace Math {
 
 	}
 
+	Expression::Expression() {}
+
 	// Getters
 	Operator Expression::getOperator() const { return m_Operator; }
 	double Expression::getFirstValue() const { return m_FirstValue; }
@@ -23,6 +25,8 @@ namespace Math {
 		: m_Operator(op), m_SecondValue(0), m_Variable(variable), m_FirstValue(value), m_VarBeforeVal(false) {
 
 	}
+
+	VariableExpression::VariableExpression() {};
 
 	Operator VariableExpression::getOperator() const { return m_Operator; }
 	double VariableExpression::getValue() const { 

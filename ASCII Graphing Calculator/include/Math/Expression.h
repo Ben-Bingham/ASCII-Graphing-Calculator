@@ -24,6 +24,7 @@ namespace Math {
 
 	public:
 		Expression(double firstValue, Operator op, double secondValue);
+		Expression();
 
 		// Getters
 		Operator getOperator() const;
@@ -42,6 +43,7 @@ namespace Math {
 	public:
 		VariableExpression(double value, Operator op, Variable variable);
 		VariableExpression(Variable variable, Operator op, double value);
+		VariableExpression();
 
 		// Getters
 		Operator getOperator() const;
