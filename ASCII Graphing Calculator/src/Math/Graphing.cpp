@@ -44,4 +44,5 @@ namespace Math {
 
 	// Setters
 	void Graphing::setExpression(Expression expression) { m_Expression = expression; }
+	void Graphing::setVariableExpression(VariableExpression expression) { m_VariableExpression = expression; }
 }

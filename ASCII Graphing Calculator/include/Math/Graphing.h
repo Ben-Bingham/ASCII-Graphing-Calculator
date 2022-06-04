@@ -17,6 +17,7 @@ namespace Math {
 		Processor m_Processor;
 
 	public:
+		Graphing(int width, int height);
 		Graphing(int width, int height, Expression expression);
 		Graphing(int width, int height, VariableExpression expression);
 
@@ -27,5 +28,6 @@ namespace Math {
 
 		// Setters
 		void setExpression(Expression expression);
+		void setVariableExpression(VariableExpression expression);
 	};
 }
