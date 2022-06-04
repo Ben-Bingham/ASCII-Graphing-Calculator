@@ -14,7 +14,10 @@ int main() {
 	//IO::GUI::Screen screen = IO::GUI::Screen(screenWidth, screenHeight);
 	IO::Translators::Console console = IO::Translators::Console();
 	
-	Math::Graphing graph = Math::Graphing(screenWidth, screenHeight, Math::Expression(20, Math::Subtraction, 1));
+	//Math::Expression expression = Math::Expression(3, Math::Subtraction, 1);
+	Math::VariableExpression expression = Math::VariableExpression(Math::X, Math::Power, 2);
+
+	Math::Graphing graph = Math::Graphing(screenWidth, screenHeight, expression);
 
 	graph.graph();
 	
